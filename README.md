@@ -69,7 +69,7 @@ AURA successfully demonstrates the capability to significantly reduce false posi
 
 **Repository:**  
 ```bash
-git clone https://github.com/pvjambur/AURA_AI
+git clone https://github.com/manishhp/AURA_AI
 ```
 
 ---
@@ -84,7 +84,7 @@ AURA_AI
 │   ├── auraai
 │   └── backend
 ├── hackthon
-└── Manish_exam
+└── react_tgbh
 ```
 
 ---
@@ -108,7 +108,7 @@ AURA_AI
    cd ../../hackthon
    npm install
    
-   cd ../Manish_exam
+   cd ../react_tgbh
    npm install
    ```
 
@@ -125,7 +125,7 @@ AURA_AI
 
 - Run `npm start` specifically in:
   ```bash
-  Manish_exam
+  react_tgbh
   ```
 
 ---
@@ -161,7 +161,7 @@ AURA_AI
 User Starts Exam
        │
        ▼
-React Frontend (Manish_exam)
+React Frontend (react_tgbh)
 │─ Session Initialized
 │─ User Behavior Tracking
 │─ Real-time Alerts & Warnings
