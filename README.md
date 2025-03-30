@@ -132,7 +132,7 @@ AURA_AI
 
 ## 🖥️ Using the Application UI:
 
-- After servers are running, open the frontend UI (`Manish_exam`) in a web browser:
+- After servers are running, open the frontend UI (`react_tgbh`) in a web browser:
   ```
   http://localhost:3000
   ```
