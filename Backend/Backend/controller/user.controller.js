@@ -54,8 +54,8 @@ const loginUser= async (req, res) => {
 }
 
 const getuserProfile=async (req,res)=>{
-    const users = await UserModel.find(); // Fetch all users
-    res.status(200).json(users);
+    res.status(200).json({ user: req.user });
+ 
 }
 
 const logoutuser = async (req, res) => {

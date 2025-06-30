@@ -1,0 +1,12 @@
+name,skill set,experience(in years),productivity score
+Alice,"React, Node.js, MongoDB",3,8.5
+Bob,"Python, Flask, PostgreSQL",5,9.2
+Charlie,"Vue.js, Firebase, TailwindCSS",2,7.8
+David,"Django, Python, AWS",6,9.5
+Eve,"Angular, Java, Spring Boot",4,8.0
+Frank,"Go, Kubernetes, Docker",7,9.7
+Grace,"Swift, iOS, Xcode",2,7.5
+Heidi,"C#, Azure, SQL Server",3,8.3
+Ivy,"JavaScript, React, CSS",3,7.9
+Jack,"Ruby, Rails, Heroku",3,8.1
+Karen,"PHP, Laravel, MySQL",3,8.4

@@ -2,36 +2,17 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { User } from 'lucide-react'; // Assuming you're using Lucide React icons
 import SettingSection from './SettingSection'; // Assuming you have a SettingSection component
-import Admin from '../../../../Backend/AuraAi/src/context/AdminContext'
+// import Admin from '../../../../Backend/AuraAi/src/context/AdminContext'
 
 const Profile = () => {
   const [profileData, setProfileData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  
-  console.log(Admin)
 
-  // Fetch profile data when the component mounts
-  useEffect(() => {
-    const fetchProfileData = async () => {
-      try {
-        const response = await axios.get("http://localhost:4000/admin/profile");
-        console.log(response.data.Admin.email); // Logs the actual profile data
-        setProfileData(response.data.Admin); // Store the profile data in state
-		
-      } catch (err) {
-        console.error("Error fetching profile data:", err);
-        setError(err.message || "An error occurred while fetching profile data.");
-      } finally {
-        setLoading(false); // Set loading to false after the request completes
-      }
-    };
 
-    fetchProfileData();
-  }, []); // Empty dependency array ensures this runs only once on mount
 
   if (loading) {
-    return <div>Loading profile data...</div>;
+    return <div></div>;
   }
 
   if (error) {

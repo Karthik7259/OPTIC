@@ -8,19 +8,19 @@ const ConnectedAccounts = () => {
 			id: 1,
 			name: "Google",
 			connected: true,
-			icon: "/google.png",
+			icon: "/google.jpeg",
 		},
 		{
 			id: 2,
 			name: "Facebook",
 			connected: false,
-			icon: "/facebook.svg",
+			icon: "/facebook.png",
 		},
 		{
 			id: 3,
 			name: "Twitter",
 			connected: true,
-			icon: "/x.png",
+			icon: "/x.jpeg",
 		},
 	]);
 	return (
@@ -33,7 +33,7 @@ const ConnectedAccounts = () => {
 					</div>
 					<button
 						className={`px-3 py-1 rounded ${
-							account.connected ? "bg-green-600 hover:bg-green-700" : "bg-gray-600 hover:bg-gray-700"
+							account.connected ? "bg-purple-500 hover:bg-purple-500" : "bg-gray-600 hover:bg-gray-700"
 						} transition duration-200`}
 						onClick={() => {
 							setConnectedAccounts(
@@ -53,7 +53,7 @@ const ConnectedAccounts = () => {
 					</button>
 				</div>
 			))}
-			<button className='mt-4 flex items-center text-indigo-400 hover:text-indigo-300 transition duration-200'>
+			<button className='mt-4 flex items-center text-purple-500 hover:text-purple-500 transition duration-200'>
 				<Plus size={18} className='mr-2' /> Add Account
 			</button>
 		</SettingSection>

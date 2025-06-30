@@ -18,7 +18,7 @@ router.post('/login',[
 ],loginUser)
 
 
-router.get('/profile',getuserProfile)
+router.get('/profile',authuser,getuserProfile)
 
 router.get('/logout',authuser,logoutuser)
 

@@ -1,0 +1,12 @@
+name of employee,occupied,current task,tasks completed
+Alice,Yes,Build Authentication Module,12
+Bob,No,API Backend for Task Management,20
+Charlie,Yes,Dashboard UI for Analytics,8
+David,Yes,Cloud Deployment Automation,30
+Eve,Yes,Microservices Integration,17
+Frank,No,DevOps CI/CD Pipeline,40
+Grace,Yes,iOS UI Revamp,10
+Heidi,Yes,Database Optimization,14
+Ivy,Yes,Frontend Revamp,14
+Jack,Yes,Performance Tuning,14
+Karen,No,Security Enhancements,14

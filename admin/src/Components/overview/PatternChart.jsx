@@ -3,12 +3,13 @@ import {motion } from 'framer-motion'
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
 
 const categoryData = [
-	{ name: "Keystrokes", value: 42 },
-	{ name: "Mouse Moves", value: 350 },
-	{ name: "Tab Swaps", value: 300 },
-	{ name: "Copy-Paste", value: 250 },
-	{ name: "Inactivity", value: 220 },
+	{ name: "Tasks Assigned", value: 12 },               // Total tasks assigned across team
+	{ name: "Tasks Completed", value: 9 },               // Tasks finished successfully
+	{ name: "Average Productivity Score", value: 76 },   // Team’s average productivity
+	{ name: "Pending Checkpoints", value: 7 },           // Remaining subtasks
+	{ name: "Agent Feedback Alerts", value: 3 }          // Cases flagged by HR or evaluation agent
 ];
+
 
 const COLORS = ["#4F46E5", "#9333EA", "#E11D48", "#059669", "#F97316"];
 const PatternChart = () => {
@@ -19,7 +20,7 @@ const PatternChart = () => {
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: 0.3 }}
 >
-<h2 className='text-lg font-medium mb-4 text-gray-100'>Risk Pattern Analysis</h2>
+<h2 className='text-lg font-medium mb-4 text-gray-100'>Team Productivity Overview</h2>
 <div className='h-80'>
 <ResponsiveContainer width={"100%"} height={"100%"}>
 					<PieChart>

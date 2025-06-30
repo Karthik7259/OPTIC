@@ -13,28 +13,29 @@ const Overviewpage = () => {
   const [notification, setNotification] = useState(null);
   
   // Show notification after 80 seconds automatically
-  useEffect(() => {
-    const notificationTimer = setTimeout(() => {
-      setNotification('New exam completed: Physics by John Doe');
-    }, 10000); // 80 seconds
+  // useEffect(() => {  
+  //   const notificationTimer = setTimeout(() => {
+  //     setNotification('New exam completed: Physics by John Doe');
+  //   }, 10000); // 80 seconds
     
-    // Clean up timer when component unmounts
-    return () => clearTimeout(notificationTimer);
-  }, []);
+  //   // Clean up timer when component unmounts
+  //   return () => clearTimeout(notificationTimer);
+  // }, []);
 
-  // Clear notification after it's shown
-  useEffect(() => {
-    if (notification) {
-      const hideNotification = setTimeout(() => {
-        setNotification(null);
-      }, 5000); // Hide after 5 seconds
+  // // Clear notification after it's shown
+  // useEffect(() => {
+  //   if (notification) {
+  //     const hideNotification = setTimeout(() => {
+  //       setNotification(null);
+  //     }, 5000); // Hide after 5 seconds
 
-      return () => clearTimeout(hideNotification);
-    }
-  }, [notification]);
+  //     return () => clearTimeout(hideNotification);
+  //   }
+  // }, [notification]);
 
   return (
     <div className='flex-1 overflow-auto relative z-10'>
+        
       {/* Notification with inline styles for animation */}
       {notification && (
         <div 
@@ -49,7 +50,7 @@ const Overviewpage = () => {
           </div>
         </div>
       )}
-      
+    
       {/* Add keyframes for the animation */}
       <style jsx>{`
         @keyframes slideIn {
@@ -74,14 +75,15 @@ const Overviewpage = () => {
           transition={{ duration: 1 }}
         >
           <StatCard
-            name="Total Exams Administered"
+            name="Total Tasks Administered"
             icon={ClipboardList}
-            value="5"
+            value="18"
             color='#2563eb'
           />
-          <StatCard name='New Users' icon={Users} value='3' color='#9333ea' />
-          <StatCard name='Violation Detection Rate' icon={ShieldAlert} value='3' color='#dc2626' />
-          <StatCard name='Risk Escalation Trend	' icon={TrendingUp} value='12.5%' color='#f97316' />
+          <StatCard name='Number of Users' icon={Users} value='11' color='#9333ea' />
+          <StatCard name='Avg Productivity Score' icon={TrendingUp} value='76%' color='#16a34a' />
+<StatCard name='Tasks Needing Attention' icon={ShieldAlert} value='3' color='#f59e0b' />
+
         </motion.div>
 
         {/* Charts and Reports Grid */}

@@ -6,19 +6,20 @@ import { Link } from 'react-router-dom';
 
 
 const SIDEBAR_ITEMS= [
+
     {
         name: "Overview",
         icon: BarChart2,
         color: "#6366f1",
         href: "/",
     },
-    { name: "Exams", icon: ClipboardList, color: "#8B5CF6", href: "/Exam" },
-    { name: "Schedule", icon: Calendar, color: "#F472B6", href: "/schedule" },
-    { name: "Respones", icon: Users, color: "#EC4899", href: "/users" },
-    { name: " Risk Analysis ", icon: Activity, color: "#10B981", href: "/risk" },
-    { name: "Violation Reports", icon: AlertOctagon, color: "#F59E0B", href: "/Violation" },
-    { name: "Analytics", icon: TrendingUp, color: "#3B82F6", href: "/analytics" },
-    // Add the new Schedule page
+    { name: "Employee", icon: ClipboardList, color: "#8B5CF6", href: "/Exam" },
+    // { name: "Schedule", icon: Calendar, color: "#F472B6", href: "/schedule" },
+    // { name: "Respones", icon: Users, color: "#EC4899", href: "/users" },
+    { name: "Assign Task ", icon: Activity, color: "#10B981", href: "/AssignTask" },
+    // { name: "Violation Reports", icon: AlertOctagon, color: "#F59E0B", href: "/Violation" },
+    { name: "Database", icon: TrendingUp, color: "#3B82F6", href: "/database" },
+    // // Add the new Schedule page
     
     { name: "Settings", icon: Settings, color: "#6EE7B7", href: "/setting" },
 ];  
@@ -34,18 +35,27 @@ const Sidebar = () => {
     }`}
     animate={{ width: isSidebarOpen ? 256 : 80 }}
        >
+        
    <div className='h-full bg-gray-800 bg-opacity-50 backdrop-blur-md p-4 flex flex-col border-r border-gray-700'>
-    <motion.button
-    whileHover={{ scale: 1.1 }}
-    whileTap={{ scale: 0.9 }}
-    onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-    className='p-2 rounded-full hover:bg-gray-700 transition-colors max-w-fit'
-    
+   <motion.button
+  whileHover={{ scale: 1.1 }}
+  whileTap={{ scale: 0.9 }}
+  onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+  className="p-2 rounded-full hover:bg-gray-700 transition-colors max-w-fit flex items-center space-x-2"
+>
+  <Menu />
+  {isSidebarOpen && (
+    <motion.h1
+      className="text-white text-lg font-semibold"
+      initial={{ opacity: 0, x: -10 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -10 }}
+      transition={{ duration: 0.2 }}
     >
-    <Menu />
-
-
-    </motion.button>
+      &nbsp;Manager 
+    </motion.h1>
+  )}
+</motion.button>
     <nav className='mt-8 flex-grow'>
         {SIDEBAR_ITEMS.map((item) => (
         <Link key={item.href} to={item.href}>
@@ -54,15 +64,15 @@ const Sidebar = () => {
             <AnimatePresence>
                
             {isSidebarOpen && (
-<motion.span
-			className='ml-4 whitespace-nowrap'
-			initial={{ opacity: 0, width: 0 }}
-			animate={{ opacity: 1, width: "auto" }}
-				exit={{ opacity: 0, width: 0 }}
-		transition={{ duration: 0.2, delay: 0.3 }}
-										>
-											{item.name}
-										</motion.span>
+                <motion.span
+  className="ml-4 whitespace-nowrap text-white" // Added text-white
+  initial={{ opacity: 0, width: 0 }}
+  animate={{ opacity: 1, width: "auto" }}
+  exit={{ opacity: 0, width: 0 }}
+  transition={{ duration: 0.2, delay: 0.3 }}
+>
+  {item.name}
+</motion.span>
 									)}
 
                 </AnimatePresence>

@@ -3,17 +3,19 @@ import { motion } from "framer-motion";
 import React from 'react'
 
 const violationData = [
-	{ name: "Jul", violations: 15 },
-	{ name: "Aug", violations: 12 },
-	{ name: "Sep", violations: 18 },
-	{ name: "Oct", violations: 14 },
-	{ name: "Nov", violations: 20 },
-	{ name: "Dec", violations: 25 },
-	{ name: "Jan", violations: 22 },
-	{ name: "Feb", violations: 19 },
-	
-	
+	{ name: "Alice", tasks: 15 },
+	{ name: "Bob", tasks: 12 },
+	{ name: "Charlie", tasks: 18 },
+	{ name: "David", tasks: 14 },
+	{ name: "Eve", tasks: 20 },
+	{ name: "Frank", tasks: 25 },
+	{ name: "Grace", tasks: 22 },
+	{ name: "Heidi", tasks: 19 },
+	{ name: "Ivy", tasks: 15 },
+	{ name: "Jack", tasks: 14 },
+	{ name: "Karen", tasks: 6 },
 ];
+
 
 
 const ViolationChart = () => {
@@ -25,7 +27,7 @@ const ViolationChart = () => {
 			transition={{ delay: 0.2 }}
     
     >
-         <h2 className='text-lg font-medium mb-4 text-gray-100'>Violation Trend Analysis</h2>
+         <h2 className='text-lg font-medium mb-4 text-gray-100'>Tasks Trend Analysis</h2>
 
                <div className="h-80">
                          <ResponsiveContainer width={"100%"} height={"100%"}>
@@ -46,7 +48,7 @@ const ViolationChart = () => {
 						/>
                         <Line
 							type='monotone'
-							dataKey='violations'
+							dataKey='tasks'
 							stroke='#6366F1'
 							strokeWidth={3}
 							dot={{ fill: "#6366F1", strokeWidth: 2, r: 6 }}

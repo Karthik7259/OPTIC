@@ -55,10 +55,5 @@ const loginAdmin = async (req, res,next) => {
   res.status(200).json({ token, Admin })
 }
 
-const profileAdmin = async (req, res,next) => {
-    const Admin = await AdminModel.findOne();
-       res.status(200).json({ Admin })
-}
 
-
-export {registerAdmin,loginAdmin,profileAdmin}
+export {registerAdmin,loginAdmin}
