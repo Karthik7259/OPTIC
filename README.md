@@ -1,278 +1,380 @@
-# AURA_AI
-Automated User Risk Assesment
+<div align="center">
 
-## Comprehensive Project Description: AURA - Privacy-first AI-driven Online Proctoring System
+# 🚀 OPTIC Platform
+### Comprehensive Employee Analytics & Management System
 
-### 1. Project Overview
-Online examinations currently face significant challenges due to privacy concerns, scalability issues, and high false-positive rates associated with traditional proctoring methods involving continuous audio and video surveillance. AURA addresses these gaps by offering a privacy-first, non-intrusive solution that leverages agent-based behavioral analytics, dynamic risk scoring, and AI-driven anomaly detection to ensure exam integrity seamlessly.
+[![React](https://img.shields.io/badge/React-19.0-blue.svg)](https://reactjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.104-009688.svg)](https://fastapi.tiangolo.com/)
+[![MySQL](https://img.shields.io/badge/MySQL-8.0-blue.svg)](https://mysql.com/)
+[![Python](https://img.shields.io/badge/Python-3.9+-yellow.svg)](https://python.org/)
 
-### 2. Gap Analysis
-Traditional proctoring approaches rely heavily on constant surveillance via webcam, microphone, and screen recording. These methods often misinterpret normal behaviors such as brief eye movements, ambient noises, or minor distractions as cheating, causing undue stress for students and administrative overhead for institutions. Additionally, such methods suffer from scalability constraints, especially when deployed for large-scale assessments.
+*Advanced AI-powered platform for employee management, analytics, and organizational insights*
 
-### 3. Literature Review
-The literature highlights consistent privacy concerns with invasive proctoring technologies. Research indicates students experience heightened anxiety, mistrust towards institutions, and diminished exam performance under surveillance-intensive conditions. Further, literature suggests a strong need for alternative, scalable, and privacy-respecting solutions, emphasizing the potential of AI-driven behavioral analytics and anomaly detection to revolutionize digital assessments.
-
-### 4. Methodology
-
-AURA's implementation involves several key stages:
-
-- **Data Collection & Behavioral Monitoring**: Capturing non-invasive behavioral signals such as keyboard dynamics, mouse interactions, window focus changes, and IP address stability.
-- **Agent-based Behavioral Analytics**: Deploying CrewAI and LangChain-based AI agents that continuously analyze behavioral patterns in real-time.
-- **Real-time Anomaly Detection**: Using FastAPI and Flask-based Python APIs, behavioral data streams are evaluated instantly to detect anomalies indicative of potential cheating.
-- **Dynamic Risk Scoring**: AI algorithms continuously update risk scores, adapting the system’s responses dynamically based on behavioral deviations.
-- **Reporting & Feedback**: Comprehensive session summaries, including JSON and PDF reports, enriched by graphical analytics (charts depicting trends and risk breakdowns).
-
-### 5. Results
-AURA successfully demonstrates the capability to significantly reduce false positives by accurately distinguishing genuine anomalies from normal test-taking behaviors. Students reported increased comfort and reduced anxiety due to non-invasive monitoring. Educational institutions saw reduced administrative burden and better scalability, resulting in enhanced trust and acceptance of online assessments.
-
-### 6. Technical Stack
-- **Frontend**: React.js, Tailwind CSS
-- **Backend**: MERN Stack (MongoDB, Express.js, React, Node.js), Flask, FastAPI
-- **AI Integration**: CrewAI, LangChain, Hugging Face
-- **Workflow Automation**: n8n
-- **Deployment & Infrastructure**: Docker, Kubernetes, AWS, GCP, Azure
-- **Security & Authentication**: JWT, OAuth
-- **Caching & Performance**: Redis
-- **CI/CD & DevOps**: GitHub Actions
-- **Reporting**: jsPDF, Chart.js, FPDF, matplotlib
-
-### 7. Use Cases
-- University-level online assessments
-- Professional certification exams
-- Corporate training evaluations
-- Remote job assessments
-- Competitive entrance exams
-
-### 8. Implementation Steps (Step-by-step)
-1. **Requirement Analysis**: Identified key issues with existing proctoring tools.
-2. **Design and Architecture**: Defined an agent-based, privacy-first monitoring framework.
-3. **Frontend Development**: Built a secure React UI with multilingual support and speech synthesis.
-4. **Backend & AI Module Development**: Established MERN-based API services and integrated AI agents (CrewAI).
-5. **Integration & Automation**: Connected modules via n8n for seamless workflow automation.
-6. **Deployment & Testing**: Containerized and deployed the solution on cloud services, utilizing CI/CD for continuous updates.
-7. **Evaluation & Feedback**: Conducted pilot testing, gathering user feedback for continuous improvement.
-
-### 9. Supplementary Materials
-- Demonstration and explanatory videos highlighting user interactions, system response to anomalies, and reporting features.
-- Graphical analysis of real-time risk trends captured during user sessions.
-- Detailed documentation and user manuals to guide system administrators and end-users.
+</div>
 
 ---
 
-# Steps to Implement 
+## 📖 Table of Contents
 
-
+- [🚀 Overview](#-overview)
+- [🏗️ Architecture](#️-architecture)
+- [📁 Platform Components](#-platform-components)
+- [✨ Core Features](#-core-features)
+- [🛠️ Technology Stack](#️-technology-stack)
+- [🚀 Quick Start](#-quick-start)
+- [📋 Prerequisites](#-prerequisites)
+- [🔧 Installation](#-installation)
+- [🚦 Development Workflow](#-development-workflow)
+- [📦 Deployment](#-deployment)
+- [📚 Documentation](#-documentation)
+- [🤝 Contributing](#-contributing)
+- [📞 Support](#-support)
 
 ---
 
-## 📌 Implementation & Utilization Guide for AURA_AI
+## 🚀 Overview
 
-**Repository:**  
-```bash
-git clone https://github.com/manishhp/AURA_AI
+AURA AI is a comprehensive enterprise platform that combines advanced analytics, AI-powered insights, and modern web technologies to provide organizations with powerful tools for employee management, performance tracking, and strategic decision-making.
+
+### 🎯 Key Objectives
+
+- 📊 **Advanced Analytics** - Real-time employee performance and organizational metrics
+- 🤖 **AI-Powered Insights** - Machine learning-driven recommendations and predictions
+- 👥 **User Management** - Comprehensive employee profiles and role-based access
+- 🔐 **Secure Authentication** - JWT-based security with admin and user portals
+- 📱 **Modern Interface** - Responsive, intuitive dashboards and user experiences
+
+---
+
+## 🏗️ Architecture
+
+The AURA AI platform follows a modern microservices architecture with clear separation of concerns:
+
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Landing Page  │    │ User Interface  │    │ Admin Dashboard │
+│    (React)      │    │    (React)      │    │    (React)      │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+         │                       │                       │
+         └───────────────────────┼───────────────────────┘
+                                 │
+                    ┌─────────────────┐
+                    │  Backend API    │
+                    │   (Node.js)     │
+                    └─────────────────┘
+                                 │
+                    ┌─────────────────┐    ┌─────────────────┐
+                    │   MONGO DB      │    │   AI Services   │
+                    │   (Database)    │    │   (FastAPI)     │
+                    └─────────────────┘    └─────────────────┘
 ```
 
 ---
 
-## 📁 Project Structure (After Cloning):
+## 📁 Platform Components
 
-```
-AURA_AI
-├── admin
-├── adminbackend
-├── Backend
-│   ├── auraai
-│   └── backend
-├── hackthon
-└── react_tgbh
-```
+| Component | Technology | Purpose | Documentation |
+|-----------|------------|---------|---------------|
+| **Landing Page** | React + Tailwind CSS | Public-facing website and platform introduction | [📖 View Docs](./landingpage/README.md) |
+| **User Interface** | React + Vite | User authentication and portal | [📖 View Docs](./backend/Login/README.md) |
+| **Admin Dashboard** | React + Vite | Administrative interface and analytics | [📖 View Docs](./admin/README.md) |
+| **Backend API** | Node.js + Express | RESTful API and business logic | [📖 View Docs](./backend/Backend/README.md) |
+| **AI Services** | FastAPI + Python | Machine learning and AI analytics | [📖 View Docs](./fastapi/README.md) |
 
 ---
 
-## 🚀 Installation Steps:
+## ✨ Core Features
 
-1. **Navigate to each folder and subfolder**:
+### 📊 Analytics & Reporting
+- Real-time employee performance metrics
+- Advanced data visualization and dashboards
+- Custom report generation
+- Trend analysis and forecasting
+
+### 🤖 AI-Powered Insights
+- Predictive analytics for employee performance
+- Automated risk assessment
+- Intelligent recommendations
+- Natural language processing for insights
+
+### 👥 User Management
+- Comprehensive employee profiles
+- Role-based access control
+- Skill tracking and development
+- Team collaboration tools
+
+### 🔐 Security & Authentication
+- JWT-based authentication system
+- Secure admin and user portals
+- Data encryption and protection
+- Audit logs and compliance
+
+### 📱 Modern Interface
+- Responsive design for all devices
+- Intuitive user experience
+- Real-time updates and notifications
+- Customizable dashboards
+
+---
+
+## 🛠️ Technology Stack
+
+### Frontend Technologies
+- **React 19** - Modern UI framework with latest features
+- **Vite** - Fast build tool and development server
+- **Tailwind CSS** - Utility-first CSS framework
+- **React Router** - Client-side routing
+- **Chart.js** - Data visualization library
+
+### Backend Technologies
+- **Node.js 18+** - JavaScript runtime environment
+- **Express.js** - Web application framework
+- **MySQL 8.0** - Relational database management
+- **JWT** - JSON Web Token authentication
+- **Bcrypt** - Password hashing and security
+
+### AI & Analytics
+- **Python 3.9+** - Core AI development language
+- **FastAPI** - Modern Python web framework
+- **Pandas** - Data manipulation and analysis
+- **NumPy** - Numerical computing
+- **Scikit-learn** - Machine learning library
+
+---
+
+## 🚀 Quick Start
+
+### 📋 Prerequisites
+
+Before running the AURA AI platform, ensure you have the following installed:
+
+- **Node.js** (v18 or higher) - [Download](https://nodejs.org/)
+- **Python** (v3.9 or higher) - [Download](https://python.org/)
+- **MySQL** (v8.0 or higher) - [Download](https://mysql.com/)
+- **Git** - [Download](https://git-scm.com/)
+
+### 🔧 Installation
+
+1. **Clone the Repository**
    ```bash
-   cd admin
-   npm install
-   
-   cd ../adminbackend
-   npm install
-   
-   cd ../Backend/auraai
-   npm install
-   
-   cd ../backend
-   npm install
-   
-   cd ../../hackthon
-   npm install
-   
-   cd ../react_tgbh
+   git clone <repository-url>
+   cd optic
+   ```
+
+2. **Set Up Database**
+   ```bash
+   # Create MySQL database
+   mysql -u root -p
+   CREATE DATABASE aura_ai;
+   ```
+
+3. **Install Backend Dependencies**
+   ```bash
+   cd backend/Backend
    npm install
    ```
 
-2. **Starting Development Servers**:
+4. **Install AI Services Dependencies**
+   ```bash
+   cd ../../fastapi
+   pip install -r requirements.txt
+   ```
 
-- Run `npm run dev` in the following directories:
-  ```bash
-  admin
-  adminbackend
-  Backend/auraai
-  Backend/backend
-  hackthon
-  ```
+5. **Install Frontend Dependencies**
+   ```bash
+   # Admin Dashboard
+   cd ../admin
+   npm install
+   
+   # User Interface
+   cd ../backend/Login
+   npm install
+   
+   # Landing Page
+   cd ../../landingpage
+   npm install
+   ```
 
-- Run `npm start` specifically in:
-  ```bash
-  react_tgbh
-  ```
+6. **Configure Environment Variables**
+   
+   Create `.env` files in each component with the following variables:
+   
+   **Backend** (`backend/Backend/.env`):
+   ```env
+   DB_HOST=localhost
+   DB_USER=root
+   DB_PASS=your_password
+   DB_NAME=aura_ai
+   JWT_SECRET=your_jwt_secret
+   PORT=5000
+   ```
+   
+   **AI Services** (`fastapi/.env`):
+   ```env
+   DATABASE_URL=mysql://user:password@localhost/aura_ai
+   API_KEY=your_api_key
+   ```
 
 ---
 
-## 🖥️ Using the Application UI:
+## 🚦 Development Workflow
 
-- After servers are running, open the frontend UI (`react_tgbh`) in a web browser:
-  ```
-  http://localhost:3000
-  ```
+### Starting All Services
 
-- Use the provided UI for interactive quizzes with multilingual support, speech synthesis, and real-time risk assessments.
+1. **Start Backend API**
+   ```bash
+   cd backend/Backend
+   npm run dev
+   ```
+
+2. **Start AI Services**
+   ```bash
+   cd fastapi
+   python -m uvicorn api:app --reload
+   ```
+
+3. **Start Frontend Applications**
+   ```bash
+   # Admin Dashboard (Terminal 1)
+   cd admin
+   npm run dev
+   
+   # User Interface (Terminal 2)
+   cd backend/Login
+   npm run dev
+   
+   # Landing Page (Terminal 3)
+   cd landingpage
+   npm start
+   ```
+
+### 🌐 Access Points
+
+- **Landing Page**: http://localhost:3000
+- **User Interface**: http://localhost:5173
+- **Admin Dashboard**: http://localhost:5174
+- **Backend API**: http://localhost:5000
+- **AI Services**: http://localhost:8000
 
 ---
 
-## 📊 Demo & Supporting Resources:
+## 📦 Deployment
 
-- **Demo Video**: Provided showcasing AURA's real-time monitoring, dynamic risk scoring, and final reporting capabilities.
+### Production Build
 
-[![AURA Demo Video](https://img.youtube.com/vi/TZFipZdc190/0.jpg)](https://youtu.be/TZFipZdc190)
+1. **Build Frontend Applications**
+   ```bash
+   # Admin Dashboard
+   cd admin && npm run build
+   
+   # User Interface
+   cd ../backend/Login && npm run build
+   
+   # Landing Page
+   cd ../../landingpage && npm run build
+   ```
 
+2. **Deploy Backend Services**
+   ```bash
+   # Backend API
+   cd backend/Backend && npm start
+   
+   # AI Services
+   cd ../../fastapi && python -m uvicorn api:app --host 0.0.0.0 --port 8000
+   ```
 
-- **Reporting**: Automatic PDF and JSON session reports are generated upon quiz completion, including detailed analytics:
-  - Risk scoring trends (Line Chart)
-  - Risk breakdown by type (Radar Chart)
-  - Overall risk distribution (Pie Chart)
+### 🚀 Deployment Platforms
+
+- **Frontend**: Vercel, Netlify, AWS S3 + CloudFront
+- **Backend**: AWS EC2, Digital Ocean, Heroku
+- **Database**: AWS RDS, Digital Ocean Managed Databases
+- **AI Services**: AWS Lambda, Google Cloud Run, Azure Functions
 
 ---
 
-## 🔄 Flowchart of AURA Implementation:
+## 📚 Documentation
 
-```plaintext
-User Starts Exam
-       │
-       ▼
-React Frontend (react_tgbh)
-│─ Session Initialized
-│─ User Behavior Tracking
-│─ Real-time Alerts & Warnings
-       │
-       ▼
-Backend (MERN, Flask, FastAPI)
-│─ Event Monitoring (Mouse, Keyboard, IP Check)
-│─ CrewAI & LangChain (Agent-based Analysis)
-│─ Dynamic Risk Scoring
-       │
-       ▼
-n8n Workflow Automation
-│─ Automated Actions (Warnings, Lockouts)
-│─ Data Processing & Storage (MongoDB, Redis)
-       │
-       ▼
-Session Completion
-│─ JSON Session Logs
-│─ PDF Report Generation (jsPDF/FPDF)
-│─ Risk Analytics (Chart.js, matplotlib)
-       │
-       ▼
-Final Review & Feedback
+### Component Documentation
+
+- [🏠 Landing Page Documentation](./landingpage/README.md)
+- [👥 User Interface Documentation](./backend/Login/README.md)
+- [📊 Admin Dashboard Documentation](./admin/README.md)
+- [🔌 Backend API Documentation](./backend/Backend/README.md)
+- [🤖 AI Services Documentation](./fastapi/README.md)
+
+### API Documentation
+
+- **Backend API**: `http://localhost:5000/api/docs` (when running)
+- **AI Services**: `http://localhost:8000/docs` (FastAPI auto-generated docs)
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions to the AURA AI platform! Please follow these guidelines:
+
+### 📋 Development Guidelines
+
+1. **Fork the Repository**
+2. **Create a Feature Branch**
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. **Make Your Changes**
+4. **Test Your Changes**
+5. **Submit a Pull Request**
+
+### 📝 Code Standards
+
+- Follow ESLint configuration for JavaScript/React
+- Use PEP 8 for Python code
+- Write clear commit messages
+- Include tests for new features
+- Update documentation as needed
+
+### 🧪 Testing
+
+```bash
+# Frontend Tests
+npm test
+
+# Backend Tests
+npm run test
+
+# Python Tests
+pytest
 ```
 
-![Screenshot 2025-03-15 152431](https://github.com/user-attachments/assets/fc4681de-5eee-4580-80b7-746a7ddf6b31)
+---
 
+## 📞 Support
+
+### 🐛 Bug Reports
+
+If you encounter any issues, please:
+
+1. Check existing [Issues](../../issues)
+2. Create a new issue with detailed information
+3. Include steps to reproduce
+4. Provide system information
+
+### 💬 Community
+
+- **Documentation**: Component-specific README files
+- **Issues**: GitHub Issues for bug reports and feature requests
+- **Discussions**: GitHub Discussions for questions and ideas
+
+### 📧 Contact
+
+For enterprise support and custom implementations, please contact our development team.
 
 ---
 
-## 🛠️ Tech Stack Summary:
+<div align="center">
 
-- **Frontend:** React.js, Tailwind CSS
-- **Backend:** MERN (MongoDB, Express.js, React, Node.js), Flask, FastAPI
-- **AI Integration:** CrewAI, LangChain
-- **Workflow Automation:** n8n
-- **Deployment & Infrastructure:** Docker, Kubernetes, AWS/GCP/Azure
-- **Security & Authentication:** JWT, OAuth
-- **Reporting & Visualization:** jsPDF, Chart.js, matplotlib
-- **Monitoring & Caching:** Redis
-- **CI/CD:** GitHub Actions
+**Built with ❤️ by the OPTIC Team**
 
-![image](https://github.com/user-attachments/assets/62214178-f0ca-431f-bf4c-47c0a6914164)
+*Empowering organizations through intelligent analytics and modern technology*
 
-
----
-
-## 🎬 Demo Video:
-**Watch the detailed project demonstration here:** [AURA Demo Video](https://youtu.be/TZFipZdc190)  
-The video highlights key functionalities, including session initialization, real-time anomaly detection, risk scoring, reporting capabilities, and user interactions.
-
----
-
-## 📊 Flowchart and Visual Descriptions:
-
-### 1\. Tech Flowchart:
-- **Description:**  
-  Illustrates AURA's complete technical workflow, clearly defining interactions between frontend (React UI), backend (MERN stack, Flask, FastAPI APIs), AI modules (CrewAI, LangChain), workflow automation (n8n), data management (MongoDB, Redis), and deployment environments (Docker, Kubernetes, AWS/Azure/GCP). It visually represents the seamless integration and continuous data flow among these components.
-![Screenshot 2025-03-15 152431](https://github.com/user-attachments/assets/fc4681de-5eee-4580-80b7-746a7ddf6b31)
----
-
-### 2\. Initial Prototype:
-- **Description:**  
-  Showcases the early-stage UI and backend integration of the AURA system. It demonstrates basic user interactions, preliminary anomaly detection, initial risk scoring features, and the initial data logging process. This visual helps in comparing improvements from the prototype phase to the final deployment.
-
-![image](https://github.com/user-attachments/assets/13dbbe44-fa99-4c31-b60f-24cf630a10ad)
-
----
-
-### 3\. N8N Langraph Workflow:
-- **Description:**  
-  Provides a detailed visualization of workflow automation designed using n8n and LangChain (Langraph). It clearly displays how real-time user data, anomaly detection events, and dynamic risk scoring triggers are managed, highlighting automated responses (warnings, lockouts), and seamless communication between AI agents and backend services.
-
-![0-4DYT-RlzGMiJSAQo](https://github.com/user-attachments/assets/e08cc832-327e-4d25-958c-c55f3c592f6a)
-
-
----
-
-### 4\. Pricing:
-- **Description:**  
-  Offers a clear breakdown of AURA’s pricing structure, including different service tiers, usage-based costs, scalability options, and added features per tier. This chart helps educational institutions and corporate clients understand cost efficiency and customization options available, facilitating informed decision-making.
-
-![image](https://github.com/user-attachments/assets/58632b2f-519e-4924-bb8f-e405ddfc4145)
-
-![image](https://github.com/user-attachments/assets/86ace3f2-1adb-49f0-9537-57a8b2f02476)
-
-
-
----
-
-### 5\. Example PDF Generated (Version 1):
-- **Description:**  
-  Demonstrates a comprehensive, auto-generated session report in PDF format upon exam completion. This version includes session duration, answers summary, keyboard and mouse event counts, anomaly detection occurrences, dynamic risk scoring, and insightful graphical analytics (line, pie, radar charts).
-
-
-![image](https://github.com/user-attachments/assets/f1f6b227-1adc-4b73-80f6-3d8c7e2c32c5)
-
-
-
-
----
-
-### 6\. Example PDF Generated (Version 2):
-- **Description:**  
-  Another variant of the automatically generated PDF report, this example emphasizes deeper analytical insights, providing a granular breakdown of detected risks, timestamps of suspicious activities, comparative session analyses, and user behavioral trends across multiple sessions. Ideal for administrative reviews and auditing purposes.
-
-![image](https://github.com/user-attachments/assets/6846d35b-5058-4a7f-a804-3029adc02b87)
-
-
----
-
-
-
-
+</div>
